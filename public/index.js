@@ -24,8 +24,6 @@
 // });
 
 
-const message = document.querySelector("#message")
-
 const addBtn = document.querySelector("form")
 
 function addItem(evt) {
@@ -48,7 +46,10 @@ function addItem(evt) {
     document.querySelector("ul").appendChild(item);
     item.appendChild(deleteBtn);
 
-        alert("Task Added Successfully!");
+        let w = window.open('', '', 'top=150,left=50,width=300,height=100')
+        w.document.write("Task Added Successfully!");
+        w.focus();
+        setTimeout(function() {w.close();}, 1500);
     };
 
     inputField.value = '';
@@ -60,7 +61,10 @@ function deleteItem(evt) {
     evt.preventDefault();
     evt.target.parentNode.remove();
 
-    alert("Task Deleted.");
+    let w = window.open('', '', 'top=150,left=50,width=300,height=100')
+    w.document.write("Task Deleted.");
+    w.focus();
+    setTimeout(function() {w.close();}, 1500);
 };
 
 function crossOffItem(evt) {
@@ -68,8 +72,16 @@ function crossOffItem(evt) {
     evt.target.classList.toggle("checked");
 
     if(evt.target.classList.contains("checked") === true) {
-        alert("Job well done! Task has been crossed off.");
+        let w = window.open('', '', 'top=150,left=50,width=300,height=100')
+        w.document.write("Job well done! Task has been crossed off.");
+        w.focus();
+        setTimeout(function() {w.close();}, 1500);
+        // alert("Job well done! Task has been crossed off.");
     } else {
-        alert("Task has been added back.");
+        let w = window.open('', '', 'top=150,left=50,width=300,height=100')
+        w.document.write("Task has been added back.");
+        w.focus();
+        setTimeout(function() {w.close();}, 1500);
+        // alert("Task has been added back.");
     };
 };

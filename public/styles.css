@@ -9,9 +9,8 @@ html, body {
 }
 
 .container {
-    padding-top: 0%;
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url("https://mocah.org/thumbs/5380420-coffee-table-desk-work-office-topdown-neat-mishmosh-layout-collection-assortment-notebook-mmacbook-mac-workspace-vintage-headphone-keyboard-productivity-pen-and-paper-public-domain-images.jpg");
     background-size: cover;
     background-position: center;

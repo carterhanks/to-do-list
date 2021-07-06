@@ -81,7 +81,7 @@ function crossOffItem(evt) {
         let w = window.open('', '', 'top=150,left=50,width=300,height=100')
         w.document.write("You aren't done with that Doozie! Job has been added back.");
         w.focus();
-        setTimeout(function() {w.close();}, 1500);
+        setTimeout(function() {w.close();}, 2000);
         // alert("Task has been added back.");
     };
 };

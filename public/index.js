@@ -14,12 +14,12 @@
 
 //     item.addEventListener('click', function(){
 //         item.style.textDecoration = "line-through";
-//         onClick(alert("Item Completed!"));
+//         alert("Item Completed!");
 //     });
 
 //     item.addEventListener('dblclick', function(){
 //         toDoContainer.removeChild(item);
-//         onDblClick(alert("Item Removed!"));
+//         alert("Item Removed!");
 //     });
 // });
 
@@ -30,6 +30,9 @@ const addBtn = document.querySelector("form")
 
 function addItem(evt) {
     evt.preventDefault();
+    if(document.getElementById("inputField").value.length == 0) {
+        alert("Uh oh! You cannot submit a blank task!");
+    } else {
     const inputField = document.querySelector("input");
 
     const item = document.createElement("li");
@@ -40,9 +43,12 @@ function addItem(evt) {
 
     const deleteBtn = document.createElement("button");
     deleteBtn.textContent = ("Delete");
-    deleteBtn.addEventListener('click', deleteItem);
+    deleteBtn.addEventListener("click", deleteItem);
     document.querySelector("ul").appendChild(item);
     item.appendChild(deleteBtn);
+
+        alert("Item Added Successfully!");
+    };
 
     inputField.value = '';
 };
@@ -52,11 +58,17 @@ addBtn.addEventListener("submit", addItem);
 function deleteItem(evt) {
     evt.preventDefault();
     evt.target.parentNode.remove();
+
+    alert("Item Deleted.");
 };
 
 function crossOffItem(evt) {
     evt.preventDefault();
+
+    const listItem = document.querySelector("ul");
+
     evt.target.classList.toggle("checked");
+    listItem.addEventListener("click", crossOffItem);
 
     if(evt.target.classList.contains("checked") === true) {
         alert("Job well done! Item has been crossed off.");

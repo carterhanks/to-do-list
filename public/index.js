@@ -62,7 +62,7 @@ function deleteItem(evt) {
     evt.target.parentNode.remove();
 
     let w = window.open('', '', 'top=150,left=50,width=300,height=100')
-    w.document.write("Doozie Deleted!");
+    w.document.write("What a Doozie! Job deleted!");
     w.focus();
     setTimeout(function() {w.close();}, 1500);
 };
@@ -79,7 +79,7 @@ function crossOffItem(evt) {
         // alert("Job well done! Task has been crossed off.");
     } else {
         let w = window.open('', '', 'top=150,left=50,width=300,height=100')
-        w.document.write("Doozie has been added back.");
+        w.document.write("You aren't done with that Doozie! Job has been added back.");
         w.focus();
         setTimeout(function() {w.close();}, 1500);
         // alert("Task has been added back.");

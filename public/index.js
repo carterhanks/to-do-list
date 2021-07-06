@@ -39,6 +39,7 @@ function addItem(evt) {
 
     const itemTitle = document.createElement("span");
     itemTitle.textContent = inputField.value;
+    itemTitle.addEventListener("click", crossOffItem);
     item.appendChild(itemTitle);
 
     const deleteBtn = document.createElement("button");
@@ -64,11 +65,7 @@ function deleteItem(evt) {
 
 function crossOffItem(evt) {
     evt.preventDefault();
-
-    const listItem = document.querySelector("ul");
-
     evt.target.classList.toggle("checked");
-    listItem.addEventListener("click", crossOffItem);
 
     if(evt.target.classList.contains("checked") === true) {
         alert("Job well done! Item has been crossed off.");

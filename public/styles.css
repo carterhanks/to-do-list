@@ -67,9 +67,6 @@ button {
 li {
     cursor: pointer;
     margin-right: 0px;
-    padding-right: 0px;
-    padding-left: 28px;
-    padding-top: 10px;
     font-size: 28px;
     color: white;
 }
@@ -77,13 +74,12 @@ li {
 ul {
     text-align: center;
     list-style-position: inside;
-    font-size: 40px;
-    color: White;
 }
 
 p {
     color: White;
     margin-top: 30px;
+    text-align: center;
 }
 
 .checked {
@@ -93,4 +89,10 @@ p {
 
 .hide {
     visibility: hidden;
+}
+
+.tasks {
+    text-align: center;
+    font-size: 40px;
+    color: White;
 }

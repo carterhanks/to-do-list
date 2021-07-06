@@ -47,7 +47,7 @@ function addItem(evt) {
     item.appendChild(deleteBtn);
 
         let w = window.open('', '', 'top=150,left=50,width=300,height=100')
-        w.document.write("Task Added Successfully!");
+        w.document.write("Doozie Added Successfully!");
         w.focus();
         setTimeout(function() {w.close();}, 1500);
     };
@@ -62,7 +62,7 @@ function deleteItem(evt) {
     evt.target.parentNode.remove();
 
     let w = window.open('', '', 'top=150,left=50,width=300,height=100')
-    w.document.write("Task Deleted.");
+    w.document.write("Doozie Deleted!");
     w.focus();
     setTimeout(function() {w.close();}, 1500);
 };
@@ -73,13 +73,13 @@ function crossOffItem(evt) {
 
     if(evt.target.classList.contains("checked") === true) {
         let w = window.open('', '', 'top=150,left=50,width=300,height=100')
-        w.document.write("Job well done! Task has been crossed off.");
+        w.document.write("Job well done! Doozie has been crossed off.");
         w.focus();
         setTimeout(function() {w.close();}, 1500);
         // alert("Job well done! Task has been crossed off.");
     } else {
         let w = window.open('', '', 'top=150,left=50,width=300,height=100')
-        w.document.write("Task has been added back.");
+        w.document.write("Doozie has been added back.");
         w.focus();
         setTimeout(function() {w.close();}, 1500);
         // alert("Task has been added back.");

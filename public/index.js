@@ -48,7 +48,7 @@ function addItem(evt) {
     document.querySelector("ul").appendChild(item);
     item.appendChild(deleteBtn);
 
-        alert("Item Added Successfully!");
+        alert("Task Added Successfully!");
     };
 
     inputField.value = '';
@@ -60,7 +60,7 @@ function deleteItem(evt) {
     evt.preventDefault();
     evt.target.parentNode.remove();
 
-    alert("Item Deleted.");
+    alert("Task Deleted.");
 };
 
 function crossOffItem(evt) {
@@ -68,8 +68,8 @@ function crossOffItem(evt) {
     evt.target.classList.toggle("checked");
 
     if(evt.target.classList.contains("checked") === true) {
-        alert("Job well done! Item has been crossed off.");
+        alert("Job well done! Task has been crossed off.");
     } else {
-        alert("Item has been added back.");
+        alert("Task has been added back.");
     };
 };

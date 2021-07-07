@@ -29,7 +29,7 @@ const addBtn = document.querySelector("form")
 function addItem(evt) {
     evt.preventDefault();
     if(document.getElementById("inputField").value.length == 0) {
-        alert("Uh oh! You cannot submit a blank task!");
+        alert("Uh oh! You cannot submit a blank Doozie!");
     } else {
     const inputField = document.querySelector("input");
 

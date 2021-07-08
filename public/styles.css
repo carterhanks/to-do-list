@@ -59,6 +59,7 @@ html, body {
     border-radius: 10px;
     background-color: skyblue;
     margin-left: 0px;
+    cursor: pointer;
 }
 
 /* .paragraph-styling {
